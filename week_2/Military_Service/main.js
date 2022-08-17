@@ -2,7 +2,7 @@ let age;
 age = prompt('What is your age');
 
     if (age < 18) {
-        console.log('Too Young');
+        console.log('Too Young for service');
     }
 else
     if (age < 27) {

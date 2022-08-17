@@ -3,16 +3,16 @@
 
 
 //Evaluate the below:
-something! // This will add the two numbers to 68
-3 + "65" //68
-7 - "3" //Perform substraction - 4
+
+3 + "65" //68, it concatenated
+7 - "3" //Perform substraction - 4, treated as a number
 15 % 5 //Give remainder - 0
-5 % 15 //Give remainder in decimal form
+5 % 15 //Gives the original input as division was not possible
 "Java" + "Script" // Produce the word Javascript
-"Java" - "Script" //Give me nothing
+"Java" - "Script" //Give me nothing because they are not numbers
 " " + " " // Gives me a blank space
 " " + 0  // Gives me the number zero
-true + true //True (1)
+true + true // Gives me 2
 true + false //Gives me 1
 false + true // Gives me 1
 false - true // Gives negative 1
