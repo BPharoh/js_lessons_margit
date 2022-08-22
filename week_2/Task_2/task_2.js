@@ -4,32 +4,32 @@
 
 //Evaluate the below:
 
-3 + "65" //68, it concatenated
-7 - "3" //Perform substraction - 4, treated as a number
-15 % 5 //Give remainder - 0
-5 % 15 //Gives the original input as division was not possible
-"Java" + "Script" // Produce the word Javascript
-"Java" - "Script" //Give me nothing because they are not numbers
-" " + " " // Gives me a blank space
-" " + 0  // Gives me the number zero
-true + true // Gives me 2
-true + false //Gives me 1
-false + true // Gives me 1
-false - true // Gives negative 1
-3 - 4 // gives negative 1
+3 + "65"               // 68, it concatenated
+7 - "3"                // Performed substraction to give -4, treated 3 as a number
+15 % 5                 // Gives me a  remainder =  0
+5 % 15                 // Gives the original input as division was not possible
+"Java" + "Script"      // Produceed the word Javascript
+"Java" - "Script"      // Gave me nothing because they are not numbers
+" " + " "              // Gives me a blank space
+" " + 0                // Gives me a space plus the number zero
+true + true            // Gives me 2, it treated true as a number 1
+true + false           // Gives me 1, ittreated false as 0 and true as number 1
+false + true           // Gives me 1, false is 0 and true is 1
+false - true           // Gives negative 1, because falseis0 and true is 1
+3 - 4                  // gives negative 1, it performed a substraction
 
 
 //Evaluate the below comparisons:
-4 >= 2 // true
-6 === 2 // false
-3 <= 1 //false
-1 != 1  //false
-"A" > "B" //false
-"B" < "C" //true
-"a" > "A" //true
-"b" < "A" //false
-true === false //false
-true != true //false
+4 >= 2                // true
+6 === 2               // false
+3 <= 1                // false
+1 != 1                // false
+"A" > "B"             // false ( It made a numeric comparision using their equivalent ASCII values)
+"B" < "C"             // true  ( It made a numeric comparision using their equivalent ASCII values)
+"a" > "A"             // true  ( It made a numeric comparision using their equivalent ASCII values)
+"b" < "A"             // false ( It made a numeric comparision using their equivalent ASCII values)
+true === false        // false
+true != true          // false
 
 
 // Make the string: 
