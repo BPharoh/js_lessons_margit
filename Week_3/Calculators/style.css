@@ -1,33 +1,24 @@
 button {
-    color: blueviolet;
+    color: rgb(61, 43, 226);
     block-size: 12px;
+    padding: 15px;
+    margin: 20px;
+    border: 1px solid;
+    text-align: justify;
+    background-color: brown;
 }
 
-
-.box {
-    display: inline-block;
-    margin: 32px;
-
-}
-
-.box1, {
-    height: 200px;
-    width: 200px;
-    margin-bottom: 10px;
-
-}
-
-.box2, {
-    height: 200px;
-    width: 200px;
-    margin-bottom: 10px;
-
-}
-
-ul li a {
-    padding: 20px;
+td  {
     display: block;
-    color: white;
-    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 1px;
+    position: static;
+    height: 12px;
+    width:  20px; 
+  }
 
-}
+th, td {
+    padding: 5px;
+    text-align: left;
+
+  }

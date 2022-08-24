@@ -5,18 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Various calculators</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1> Gasoline Calculator</h1>
     <section>
-       <table>
-        <thead> 
+        <p>Make a program that asks the price of the gasoline and the amount of money from the user. The program calculates how much gasoline the user gets with the money. The result is displayed on to screen. If there are more than 10 litres, then message on the screen: "good, you can escape now" if less, it shows the message: "Ups, you have to stay here."</p>
+    </section>
+    <section>
+        <table>
             <tr>
-                <td>Price</td>
-                <td>Money</td>
+              <th>Price:</th>
+              <td></td>
             </tr>
-        </thead>
-       </table>
+            <tr>
+              <th>Money:</th>
+              <td></td>
+            </tr>
+          </table>
+    </section>
+    <section>
+        <button onclick="calculateAmount" type="button">Calculate</button>
     </section>
     <script src="main.js"></script>
 </body>

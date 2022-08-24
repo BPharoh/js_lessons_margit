@@ -1,16 +1,17 @@
-function amount() { 
+function calculateAmount(price, money) { 
 
-let price;
-let money;
-amount = (money/price);
+return  price / money;
 
 price = Number(prompt('What is the gasoline price?'));
 money = Number(prompt('How much money do you have?'));
 
 if (amount < 10) {
-    console.log('You have to stay here');
+    print('You have to stay here');
 } else {
-    console.log('Good, you can escape now');
+    print('Good, you can escape now');
 }
 
-}  function amount ()
+}  
+
+calculateAmount(price, money);
+
