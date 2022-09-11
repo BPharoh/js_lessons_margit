@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pizza Task</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="pizza.jpeg" alt="Pizza Options">
+        <div class="content">
+
+            <h1>Ordering a Pizza</h1>
+
+            <form>
+                <h2>Customer Name</h2>
+                <div>
+                    <input type="text" id="name" placeholder="Please input your names here">
+                </div>
+
+                <h2> Please select your order quantity</h2>
+                <p>(Pizza price is depending on the selected quantity)</p>
+
+                <div>
+                    <div><input id="quantity2" type="radio" name="quantity" value="two">
+                        <label for="quantity2">For 2, the price is 7.50</label>
+                    </div>
+                    <div>
+                        <input id="quantity4" type="radio" name="quantity" value="four">
+                        <label for="quantity4"> For 4, the price is 10,50</label>
+                    </div>
+                    <div>
+                        <input id="quantity6" type="radio" name="quantity" value="six">
+                        <label for="quantity6">For 6, the price is 12,50€</label>
+                    </div>
+                    <div>
+                        <input id="quantity8" type="radio" name="quantity" value="eight">
+                        <label for="quantity8"> For 8, the price is 15,50€</label>
+                    </div>
+
+
+                    <h2> Please select your preffered pizza toppings </h2>
+                    <p>(!Notice: 70 cents are added for each additional toppings after 4 selections)</p>
+
+                    <div>
+                        <input type="checkbox" id="option1" value="pepperoni">
+                        <label for="option1">Pepperoni</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option2" value="margherita">
+                        <label for="option2">Margherita</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option3" value="meatlovers">
+                        <label for="option3">BBQ Meatlovers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option4" value="cheese">
+                        <label for="option4">Cheese</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="option5" value="mediterranean">
+                        <label for="option5">Mediterranean</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option6" value="italian">
+                        <label for="option6">Italian</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option7" value="bacon">
+                        <label for="option7">Bacon</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option8" value="veggie">
+                        <label for="option8">Veggie</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option9" value="spicy">
+                        <label for="option9">Hot & Spicy</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option10" value="chicken">
+                        <label for="option10">Chicken</label>
+                    </div>
+                    <div>
+
+                        <h2> Please Select your prefered delivery method</h2>
+
+                        <select name="delievery" id="delivery">
+                            <option value="home">Home Delivery, +5€</option>
+                            <option value="dinning">Dinning</option>
+                            <option value="pick Up">Pick Up</option>
+                        </select>
+                        <button id="submit">Make Order</button>
+            </form>
+        </div>
+    </div>
+    <p id="order"></p>
+    <script src="main.js"></script>
+</body>
+
+</html>
