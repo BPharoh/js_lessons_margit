@@ -2,8 +2,8 @@ const form = document.querySelector('form');
 const age = document.querySelector('#age');
 const client = document.querySelector('#name');
 const conditions = document.querySelectorAll('[name=conditions]');
-const badHabit = document.querySelectorAll('[name=bad_habits]');
-const goodHabit = document.querySelectorAll('[name=good_habits]');
+const negativeHabit = document.querySelectorAll('[name=negative-habits]');
+const positiveHabit = document.querySelectorAll('[name=positive-habits]');
 const  evaluation = document.querySelector('#evaluation');
 
 // let healthsArray = [];
@@ -16,8 +16,8 @@ const checkInsurance  = (event) => {
 let ageSelected = age.value;
 let clientName = client.value;
 let conditionsChoosen = [];
-let badHabitsChoosen = [];
-let goodHabitsChoosen = [];
+let negativeHabitsChoosen = [];
+let positiveHabitsChoosen = [];
 let evaluation = 500;
 
 
@@ -48,33 +48,37 @@ conditions.forEach((item) => {
         evaluation *=  (1.01**(conditionsChoosen.length));
     }
 
-goodHabit.forEach((item) => {
+positiveHabit.forEach((item) => {
     if (item.checked) {
-        goodHabitsChoosen.push(item.value);
+        positiveHabitsChoosen.push(item.value);
     }
 });
 
-    if (goodHabitsChoosen.length > 0) { 
-        evaluation *= (0.95**(goodHabitsChoosen.length));
+    if (positiveHabitsChoosen.length > 0) { 
+        evaluation *= (0.95**(positiveHabitsChoosen.length));
     }
 
-badHabit.forEach((item) => {
+negativeHabit.forEach((item) => {
     if (item.checked) {
-        badHabitsChoosen.push(item.value);
+        negativeHabitsChoosen.push(item.value);
     }
 });
-     if (badHabitsChoosen.length > 0) {
-        evaluation *= (1.05**(badHabitsChoosen.length));
+     if (negativeHabitsChoosen.length > 0) {
+        evaluation *= (1.05**(negativeHabitsChoosen.length));
     }
+
+Math.floor(evaluation);
 
 console.log(ageSelected);
 console.log(clientName);
 console.log(conditionsChoosen);
-console.log(badHabitsChoosen);
-console.log(goodHabitsChoosen);
+console.log(negativeHabitsChoosen);
+console.log(positiveHabitsChoosen);
 console.log(evaluation);
 
-window.alert (`Hello ${clientName}, your health insurance bill is ${evaluation}`);
+
+
+window.alert(`Hello ${clientName}, your health insurance bill is ${evaluation}`);
 // evaluation.innerHTML = (`Hello ${clientName}, your health insurance bill is ${evaluation}`);
 
 form.reset();
