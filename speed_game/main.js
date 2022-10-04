@@ -12,38 +12,48 @@ let active = 0;
 let timer;
 let pace = 1000;
 let rounds = 0;
+const clickSound = () => new Audio("assets/mixkit-player-jumping-in-a-video-game-2043.wav").play();
+const startSound = () => new Audio("assets/mixkit-game-level-completed-2059.wav").play();
+const endSound = () => new Audio("assets/mixkit-final-level-bonus-2061.wav").play();
 
 
-
+// random generator Code from w3schools //
 const getRndInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
+
+circles.forEach((circle, i) => {
+    circle.addEventListener('click', () => clickObject(i));
+});
 
 const clickObject = (i) => {
     if ( i !== active) {
         return endGame();
     } else {
+        clickSound();
         count++;
         rounds--;
-    }
         score.textContent = count;
-        result.textContent = count;
-   
+    }
 };
 
 
 const startGame = () => {
-    circles.forEach((circle, i) => {
-        circle.addEventListener('click', () => clickObject(i));
-    });
-
-    // for (let i = 0; i < circles.length; i++) {
-    //     circles[i].style.pointerEvents = 'auto';
-    // }
    
+    for (let i = 0; i < circles.length; i++) {
+        circles[i].style.pointerEvents = 'auto';
+    }
+
+    // Number of missed rounds allowed
+
     if (rounds >= 3) {
         return endGame();
     }
+ 
+
+    
+   
+    
 
     let nextActive = pickNew(active);
 
@@ -51,7 +61,6 @@ const startGame = () => {
     circles[active].classList.remove('active-state');
 
     active = nextActive;
-
     console.log('current active number is:', active);
     timer = setTimeout(startGame, pace);
 
@@ -61,7 +70,6 @@ const startGame = () => {
 
     function pickNew(active) {
         let nextActive = getRndInt(0, 3);
-
         if (nextActive != active) {
             return nextActive;
         } else {
@@ -74,8 +82,16 @@ const startGame = () => {
 };
 
 const endGame = () => {
+   
    overlay.style.visibility = 'visible';
    start.style.visibility = 'visible';
+   end.style.display = 'hidden';
+   endSound();
+   if(count < 10){
+    result.textContent = `You got ${count} birds and have a kind heart` ;
+   } else if (count > 10) {
+    result.textContent = `You got ${count} birds and have a mean heart` ;
+   }
     clearTimeout(timer);
 };
 
@@ -85,7 +101,6 @@ const restartGame = () => {
 
 const closeButton = () => {
     overlay.style.visibility = 'hidden';
-    clearTimeout(timer);
 }
 
 
@@ -93,6 +108,6 @@ const closeButton = () => {
 
 start.addEventListener('click', startGame);
 end.addEventListener('click', endGame);
-closeOverlay.addEventListener('click', closeButton);
+closeOverlay.addEventListener('click', restartGame);
 result.addEventListener('click', clickObject);
-replay.addEventListener('click', restartGame);
+// replay.addEventListener('click', restartGame);

@@ -14,27 +14,25 @@
 <body>
     <section class="game-area">
     <div id="text-zone">
-    <h1>Speed game</h1>
-    <p id="scoreBoard">Your right click is: <span id="scores"> times </span></p>
+    <h1 id="game-title">SHOOT THE BIRDS</h1>
+    <p class="scoreBoard">Your total right clicks is: <span id="scores"></span></p>
     </div>
     <div class="circle">
-        <div class="circles active-state">1</div>
-        <div class="circles">2</div>
-        <div class="circles">3</div>
-        <div class="circles">4</div>
+        <div class="circles"></div>
+        <div class="circles"></div>
+        <div class="circles"></div>
+        <div class="circles"></div>
     </div>
     <div class="button">
-        <button  name="startGame" class="btn" id="start"> Start Game </button>
+        <button  name="startGame" class="btn" id="start" onclick="startSound()"> Start Game </button>
         <button  name="endGame"  class="btn" id="stop"> Stop Game </button>
     </div>  
     </section>
     <section class="overlay">
         <div class="modal">
             <span id="close" onclick="closeButton()">&times;</span>
-        <p>Your  score is: <span id="finalScore">0</span> sorry game is over </p>
-        <button type="button" id="replay">Replay Game</button>
+        <p class="finalScore"><span id="finalScore">0</span></p>
     </div>
-    <audio src="mysound.mp3" id="sound"></audio>
 </section>
     <script src="main.js"></script>
 </body>
