@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>BG Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Linear Gradient Generator</h1>
+        <form class="gradient">
+            <h2>Colors</h2>
+            <div class="colors">
+                <input type="color" class="colorA"  name="colorA" value="#0000ff">
+                <input type="color"  class="colorB" name="colorB" value="#008000">
+            </div>
+            <h2>Direction</h2>
+            <div>
+                <div>
+                    <input type="radio" name="position" id="south-east" value="south east">
+                    <label for="south-east"><span class="material-icons">south_east</span>
+                    </label>
+                    <input type="radio" name="position" id="south" value="south">
+                    <label for="south"><span class="material-icons">south</span>
+                    </label>
+                    <input type="radio" name="position" id="south-west" value="south west">
+                    <label for="south-west"><span class="material-icons">south_west</span>
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="position" id="west" value="west">
+                    <label for="west"><span class="material-icons">east</span>
+                    </label>
+                    <input type="radio" name="position" id="north-west" value="north west">
+                    <label for="north-west"><span class="material-icons">west</span>
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="position" id="north" value="north">
+                    <label for="north"><span class="material-icons">north_east</span>
+                    </label>
+                    <input type="radio" name="position" id="north-east" value="north east">
+                    <label for="north-east"><span class="material-icons">north</span>
+                    </label>
+                    <input type="radio" name="position" id="east" value="east">
+                    <label for="east"><span class="material-icons">north_west</span>
+                    </label>
+                </div>
+            </div>
+            <p>CSS code:</p>
+        </form>
+    </div>
+   
+<script src="main.js"></script>
+</body>
+
+</html>

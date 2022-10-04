@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Speed Game</title>
+</head>
+<body>
+    <section class="game-area">
+    <div id="text-zone">
+    <h1>Speed game</h1>
+    <p id="scoreBoard">Your right click is: <span id="scores"> times </span></p>
+    </div>
+    <div class="circle">
+        <div class="circles active-state">1</div>
+        <div class="circles">2</div>
+        <div class="circles">3</div>
+        <div class="circles">4</div>
+    </div>
+    <div class="button">
+        <button  name="startGame" class="btn" id="start"> Start Game </button>
+        <button  name="endGame"  class="btn" id="stop"> Stop Game </button>
+    </div>  
+    </section>
+    <section class="overlay">
+        <div class="modal">
+            <span id="close" onclick="closeButton()">&times;</span>
+        <p>Your  score is: <span id="finalScore">0</span> sorry game is over </p>
+        <button type="button" id="replay">Replay Game</button>
+    </div>
+    <audio src="mysound.mp3" id="sound"></audio>
+</section>
+    <script src="main.js"></script>
+</body>
+</html>
+

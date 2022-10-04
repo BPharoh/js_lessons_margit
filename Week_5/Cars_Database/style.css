@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling  */
+
+body {
+    background-color: cornflowerblue;
+}
+
+header {
+    text-align: center;
+}
+
+.body_display {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.container1 {
+    text-align: center;
+    margin: 10px auto 10px auto;
+}
+
+.container2 {
+   text-align: center;
+   margin: 10px auto 10px auto;
+}
+
+/*  Form Styling */
+
+
+
+.container1 input {
+    padding: 5px;
+    margin: 5px auto 5px auto;
+    left: 85%;
+
+}
+
+/*  TABLE STYLING */
+
+table {
+    padding: 12px;
+    margin: 20px;
+    position: absolute;
+    border-collapse: collapse;
+
+}
+
+thead {
+    background-color: red;
+}
+
+td {
+    padding: 10px;
+}

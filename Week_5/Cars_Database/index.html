@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cars Database</title>
+</head>
+<body>
+    <header>
+        <h2>Search by Car license number</h2>
+        
+        <form id="form-search">
+            <div>
+                <label for="search">License Number</label>
+                <input type="text" name="search" id="search">
+            </div>
+            <input type="button" value="search">
+        </form>
+    </header>
+    <main>
+    <div class="body_display">
+        <section class="container1">
+            <h2>Insert Car Data</h2>
+            <form id="form-upload"> 
+               <div >
+                <label for="number">License Number: </label>
+                <input type="text" id="number" name="number">
+               </div>
+               <div>
+                <label for="maker">MAKER: </label>
+                <input type="text" id="maker" name="number">
+               </div>
+               <div>
+                <label for="model">MODEL: </label>
+                <input type="text" id="model" name="number">
+               </div>
+               <div>
+                <label for="owner">OWNER: </label>
+                <input type="text" id="owner" name="number">
+               </div>
+               <div>
+                <label for="price">PRICE: </label>
+                <input type="text" id="price" name="number">
+               </div>
+               <div>
+                <label for="color">COLOR: </label>
+                <input type="text" id="color" name="number">
+               </div>
+                <div>
+                    <input type="submit" name="Add" value="Add Car">
+                    <input type="reset" name="Reset">
+                </div>
+            </form>
+        </section>
+        <section class="container2">
+            <table>
+                <thead>
+                    <th>
+                        <tr>
+                            <td>LICENCE</td>
+                            <td>MAKER</td>
+                            <td>MODEL</td>
+                            <td>OWNER</td>
+                            <td>PRICE</td>
+                            <td>COLOR</td>
+                        </tr>
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</main>
+   
+    
+</body>
+</html>
