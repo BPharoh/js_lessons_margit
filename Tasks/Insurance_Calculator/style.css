@@ -21,6 +21,8 @@ h2 {
 
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color: cornflowerblue;
+    width: 100%;
 }
 
 div {
@@ -28,8 +30,9 @@ div {
 }
 
 form { 
-    background-color:cornflowerblue
+    background-color:cornflowerblue;
 }
+
 input
 button {
     font-family: inherit;
@@ -45,6 +48,8 @@ button {
     height: 20px;
     border-radius: 5px;
   }
+
+
   button:hover {
     color: white;
     background: rgb(0, 7, 3);
@@ -52,7 +57,7 @@ button {
     padding: 0.5rem, 1rem;
     cursor: pointer;
 
-  }
+}
 
 #Age input {
     display: flex;

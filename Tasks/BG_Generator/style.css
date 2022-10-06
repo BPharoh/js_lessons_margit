@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(to right, #0000ff, #008000);
+    background-image: linear-gradient(to right,  #0000ff, #008000);
 }
 
 h2 {
