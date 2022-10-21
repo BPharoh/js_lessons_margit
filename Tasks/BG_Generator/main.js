@@ -1,29 +1,34 @@
-const form = document.querySelector(".gradient");
-let cssCode = document.querySelector("p");
+const body = document.querySelector("body");
 let colorA = document.querySelector(".colorA");
 let colorB = document.querySelector(".colorB");
-let position = document.querySelectorAll('input[name="position"]');
+let positions = document.querySelectorAll('input[name="position"]');
+let code = document.querySelector("p");
+console.log(positions)
 
-const chooseGradient = (event) => {
-    event.preventDefault();
 
 
-        let chosenValue;
 
-        position.forEach((item) => {
-            if (item.checked) {
-                chosenValue = item.value;
+    function chooseGradient () {
 
+        let choosenValue;
+        positions.forEach((position) => {
+            if (position.checked) {
+                choosenValue = position.value;
+                console.log(choosenValue)
             }
         }); 
 
-    let gradient = `linear-gradient(${chosenValue}, ${colorA.value}, ${colorB.value}`;
-    console.log(gradient);
+        let gradient =  `linear-gradient(${choosenValue}, ${colorA.value}, ${colorB.value})`;    
+        body.style.backgroundImage = gradient;
+        code.textContent = gradient + ";";
+    };
 
-        gradient = document.body.style.background-image;
-        cssCode.textContent = gradient + ";";
 
-};
 
-form.addEventListener('change', chooseGradient);
+body.addEventListener("change", chooseGradient);
+colorA.addEventListener("input", chooseGradient);
+colorB.addEventListener("input", chooseGradient);
+
+
+       
 

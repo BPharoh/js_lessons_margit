@@ -5,7 +5,13 @@
 }
 
 body {
-    background-image: linear-gradient(to right,  #0000ff, #008000);
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #0000ff, #008000);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    margin: 0;
+    font-size: 18px;
 }
 
 h2 {
@@ -21,11 +27,16 @@ p {
     background-color: rgb(255, 255, 255);
     max-width: 450px;
     min-width: 300px;
-    height: 80vh;
+    height: 100vh;
     color: #333;
     text-align: center;
     padding: 2rem;
     box-shadow: 0 5px 5px #333;
+  }
+
+  .colors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
 
@@ -33,9 +44,8 @@ p {
     background-color: transparent;
     border: none;
     box-shadow: none;
-    justify-content: space-around;
     border-radius: 5px;
-    width: 100px;
+    width: 100%;
     height: 50px;
   }
 
@@ -47,4 +57,23 @@ p {
     visibility: none;
     cursor: pointer;
 }
+
+
+/* .positions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.position {
+  display: inline-block;
+}
+
+label {
+  margin: 0.5rem;
+  background-color: #545454;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: white;
+} */
 

@@ -11,51 +11,52 @@
     <title>BG Generator</title>
 </head>
 
-<body>
+<body >
     <div class="container">
         <h1>Linear Gradient Generator</h1>
-        <form class="gradient">
+        <form id="gradient_generator">
             <h2>Colors</h2>
             <div class="colors">
                 <input type="color" class="colorA"  name="colorA" value="#0000ff">
                 <input type="color"  class="colorB" name="colorB" value="#008000">
             </div>
             <h2>Direction</h2>
-            <div>
+            <div class="positions">
                 <div>
-                    <input type="radio" name="position" id="south-east" value="south east">
+                    <input type="radio" name="position" id="south-east" value="to bottom right">
                     <label for="south-east"><span class="material-icons">south_east</span>
                     </label>
-                    <input type="radio" name="position" id="south" value="south">
+                    <input type="radio" name="position" id="south" value="to bottom">
                     <label for="south"><span class="material-icons">south</span>
                     </label>
-                    <input type="radio" name="position" id="south-west" value="south west">
+                    <input type="radio" name="position" id="south-west" value="to bottom left">
                     <label for="south-west"><span class="material-icons">south_west</span>
                     </label>
                 </div>
                 <div>
-                    <input type="radio" name="position" id="west" value="west">
+                    <input type="radio" name="position" id="west" value="to right">
                     <label for="west"><span class="material-icons">east</span>
                     </label>
-                    <input type="radio" name="position" id="north-west" value="north west">
+                    <input type="radio" name="position" id="north-west" value="to left">
                     <label for="north-west"><span class="material-icons">west</span>
                     </label>
                 </div>
                 <div>
-                    <input type="radio" name="position" id="north" value="north">
+                    <input type="radio" name="position" id="north" value="to top right">
                     <label for="north"><span class="material-icons">north_east</span>
                     </label>
-                    <input type="radio" name="position" id="north-east" value="north east">
+                    <input type="radio" name="position" id="north-east" value="to top">
                     <label for="north-east"><span class="material-icons">north</span>
                     </label>
-                    <input type="radio" name="position" id="east" value="east">
+                    <input type="radio" name="position" id="east" value="to top left">
                     <label for="east"><span class="material-icons">north_west</span>
                     </label>
                 </div>
             </div>
     
         </form>
-        <p>CSS code:</p>
+        <h2> CSS code:</h2>
+        <p>Linear-gradient();</p>
     </div>
    
 <script src="main.js"></script>
