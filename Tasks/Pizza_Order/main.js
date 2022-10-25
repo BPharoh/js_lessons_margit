@@ -56,7 +56,7 @@ const makeOrder = (event) => {
     console.log(deliverySelected);
     console.log(price);
 
-    order.innerHTML= `Thank you <span>${clientName}</span> for your order. You have made order for <span>${quantitySelected}</span> pizzas. Here are your toppings: <span>${optionsSelected.join( ',' )}</span> and the delivery method will be: <span>${deliverySelected}</span>. Total price is for your order is: <span>${price} €</span>.`;
+    order.innerHTML = `Thank you <span>${clientName}</span> for your order. You have made order for <span>${quantitySelected}</span> pizzas. Here are your toppings: <span>${optionsSelected.join( ',' )}</span> and the delivery method will be: <span>${deliverySelected}</span>. Total price is for your order is: <span>${price} €</span>.`;
     
   
     form.reset();
