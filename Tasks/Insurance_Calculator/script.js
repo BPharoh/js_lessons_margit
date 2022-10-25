@@ -4,7 +4,7 @@ const client = document.querySelector('#name');
 const conditions = document.querySelectorAll('[name=conditions]');
 const negativeHabit = document.querySelectorAll('[name=negative-habits]');
 const positiveHabit = document.querySelectorAll('[name=positive-habits]');
-const  evaluation = document.querySelector('#evaluation');
+const  message = document.querySelector('#evaluation');
 
 // let healthsArray = [];
 // healthsArray = Array.from(healths).map(item => item.value);
@@ -77,9 +77,8 @@ console.log(positiveHabitsChoosen);
 console.log(evaluation);
 
 
-
-window.alert(`Hello ${clientName}, your health insurance bill is ${evaluation}`);
-// evaluation.innerHTML = (`Hello ${clientName}, your health insurance bill is ${evaluation}`);
+evaluation = (`Hello ${clientName}, your health insurance bill is ${evaluation}`);
+message.textContent = evaluation;
 
 form.reset();
 
