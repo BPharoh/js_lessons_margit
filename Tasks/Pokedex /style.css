@@ -27,11 +27,11 @@ body {
 
   /*  Game container */
 
-  .container {
+  .pokemonContainer {
     font: normal;
     display: grid;
     justify-content: center;
-   gap:2rem;
+    gap: 2rem;
     grid-template-columns: repeat(6, 1fr);
 
   }

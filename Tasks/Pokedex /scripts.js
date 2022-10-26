@@ -1,7 +1,7 @@
-const content = document.querySelector(".container");
-const searchPokemonName = document.querySelector("#game-search");
+const pokemonContainer = document.querySelector("#pokemonContainer");
+const searchPokemonName = document.querySelector("#PokemonSearch");
 const buttons = document.querySelectorAll(".buttons");
-let pokemonCount = document.querySelector("#results");
+let pokemonCount = document.querySelector("#pokemonCount");
 let pokeData = [];
 let gen = [];
 let url;
@@ -98,14 +98,13 @@ const pokeCards = () => {
   const cards = pokeData
     .map((pokemon) => {
       return ` <div class="cards image">
-        <h2>${pokemon.id}. ${pokemon.name}</h2>
+        <h2>${pokemon.id}. ${pokemon.name.toUpperCase()}</h2>
         <img src=${pokemon.img} alt="${pokemon.name}"/>
         <p> Type: ${pokemon.type}</p>
         </div>`;
     })
     .join("");
-  console.log(pokeData);
-  content.innerHTML = cards;
+  pokemonContainer.innerHTML = cards;
 };
 
 fetchData(limit, offset);
