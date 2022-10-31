@@ -9,7 +9,7 @@ let url;
 let limit;
 let offset;
 
-// console.log("pokemonSearch:", pokemonSearch);
+console.log("pokemonSearch:", pokemonSearch);
 
 
 pokemonContainer.style.visibility = 'hidden';
@@ -44,7 +44,7 @@ const pokeCards = () => {
       console.log("type:", type);
       if (type.length < 2) {
         return ` <div class="cards">
-        <h2>${pokemon.id}. ${pokemon.name}</h2>
+        <h2>${pokemon.id}. ${pokemon.name.toUpperCase()}</h2>
         <div class="pokemon">
         <img src=${pokemon.image} alt="${pokemon.name}"/>
         </div>
@@ -54,7 +54,7 @@ const pokeCards = () => {
         </div>`;
       } else {
         return ` <div class="cards image">
-        <h2>${pokemon.id}. ${pokemon.name}</h2>
+        <h2>${pokemon.id}. ${pokemon.name.toUpperCase()}</h2>
         <div class="pokemon">
         <img src=${pokemon.image} alt="${pokemon.name}"/>
         </div>
@@ -134,9 +134,9 @@ pokemonSearch.addEventListener('keyup', () => {
   let cards1 = pokeData.map((poke) => {
     kind = poke.type.split(" ");
     console.log("kind:", kind);
-    if (kind.length < 2 && poke.name.includes(value)) {
+    if (kind.length < 2 && poke.name.toLowerCase().includes(value)) {
       return ` <div class="cards">
-      <h2>${poke.id}. ${poke.name}</h2>
+      <h2>${poke.id}. ${poke.name.toUpperCase()}</h2>
       <div class="pokemon">
       <img src=${poke.image} alt="${poke.name}"/>
       <div/>
@@ -144,9 +144,9 @@ pokemonSearch.addEventListener('keyup', () => {
       <img  src="icons/${kind[0]}.png" />
       </div>
       </div>`;
-    } else if (kind.length > 1 && poke.name.includes(value)) {
+    } else if (kind.length > 1 && poke.name.toLowerCase().includes(value)) {
       return ` <div class="cards image">
-      <h2>${poke.id}. ${poke.name}</h2>
+      <h2>${poke.id}. ${poke.name.toUpperCase()}</h2>
       <div class="pokemon">
       <img src=${poke.image} alt="${poke.name}"/>
       <div/>

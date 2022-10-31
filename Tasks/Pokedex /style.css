@@ -10,36 +10,73 @@ body {
   color: white;
   text-align: center;
   background-image: url("icons/neon-fanart.jpeg");
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+header {
+  padding: 5px;
+}
+
+
+
 h1 {
-  margin: 20px 20px;
+  text-shadow: 0 0 5px #ffee10;
+  cursor: pointer;
+}
+
+.pokedex a {
+  text-decoration: none;
+  color: black;
+}
+
+.pokedex a:hover {
+  color: greenyellow;
 }
 
 h2 {
   background-color: rgb(155, 14, 14);
+  color: #4CAF50;
   font-size: 0.8rem;
   border-radius: 10px;
-  min-height: 1rem;
 }
 
-p {
-  margin: 10px;
+.pokemonCount {
+  color:black;
+  border-radius: 5px;
+  text-shadow: 0 0 5px #ffee10;
 }
+
+.pokemonSearch  {
+  border-radius: 5px;
+  background-color: aquamarine;
+}
+
+.pokemonSearch::placeholder {
+  text-align: center;
+}
+
+
 
 /*  Game container */
 
+.pokemonWrapper {
+  flex: 1 1 auto;
+}
+
 .pokemonContainer {
-  font: normal;
-  display: grid;
+  display: flex;
   justify-content: center;
-  gap:2rem;
-  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .cards {
   max-height: 300px;
   width: 170px;
+  margin: 20px;
   background-color: green;
   border-radius: 10px;
   transition: 3s;
@@ -136,4 +173,16 @@ button {
 input {
   margin: 5px auto 5px auto;
   width: 25vw;
+}
+
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer p {
+  text-shadow: 0 0 5px #ffee10;
+  color: black;
 }

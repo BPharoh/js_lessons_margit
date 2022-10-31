@@ -8,28 +8,36 @@
     <title>Pokedex</title>
 </head>
 <body>
-    <h1>Pokedex</h1>
-    <div id="pokemonGenerations">
-        <button class="buttons" value="1"><span>Gen 1</span></button>
-        <button class="buttons" value="2"><span>Gen 2</span></button>
-        <button class="buttons" value="3"><span>Gen 3</span></button>
-        <button class="buttons" value="4"><span>Gen 4</span></button>
-        <button class="buttons" value="5"><span>Gen 5</span></button>
-        <button class="buttons" value="6"><span>Gen 6</span></button>
-        <button class="buttons" value="7"><span>Gen 7</span></button>
-        <button class="buttons" value="8"><span>Gen 8</span></button>
-        <button class="buttons" value="9"><span>Gen 9</span></button>
-    </div>
-    <div class="top-side">
-        <label for="pokemonSearch"></label>
-        <input type="search" 
-        id="pokemonSearch" 
-        class="pokemonSearch" 
-        placeholder="search pokemon by name">
-        <p id="pokemonCount" class="pokemonCount"> Click on the generations to display and search pokemons </p>
-    </div>
+    <header>
+        <h1 class="pokedex"><a href="index.html">Pokedex</a></h1>
+        <div id="pokemonGenerations">
+            <button class="buttons" value="1"><span>Gen 1</span></button>
+            <button class="buttons" value="2"><span>Gen 2</span></button>
+            <button class="buttons" value="3"><span>Gen 3</span></button>
+            <button class="buttons" value="4"><span>Gen 4</span></button>
+            <button class="buttons" value="5"><span>Gen 5</span></button>
+            <button class="buttons" value="6"><span>Gen 6</span></button>
+            <button class="buttons" value="7"><span>Gen 7</span></button>
+            <button class="buttons" value="8"><span>Gen 8</span></button>
+            <button class="buttons" value="9"><span>Gen 9</span></button>
+        </div>
+        <div> 
+            <label for="pokemonSearch"></label>
+            <input type="search" 
+            id="pokemonSearch" 
+            class="pokemonSearch" 
+            placeholder="search pokemon by name">
+            <p id="pokemonCount" class="pokemonCount"> Click on the generations to display and search pokemons </p>
+        </div>
+    </header>
+   <div class="pokemonWrapper">
     <div class="pokemonContainer" id="pokemonContainer">
     </div>
+    </div>
+    <footer class="footer"> 
+        <p> &copy; Copyright - Alexander Otulugbu</p>  
+    </footer>
+
     <script src="scripts.js"></script>
 </body>
 
