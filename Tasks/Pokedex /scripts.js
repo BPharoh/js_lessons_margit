@@ -45,7 +45,9 @@ const pokeCards = () => {
       if (type.length < 2) {
         return ` <div class="cards">
         <h2>${pokemon.id}. ${pokemon.name}</h2>
+        <div class="pokemon">
         <img src=${pokemon.image} alt="${pokemon.name}"/>
+        </div>
         <div class="icons" >
         <img  src="icons/${type[0]}.png" />
         </div>
@@ -53,11 +55,13 @@ const pokeCards = () => {
       } else {
         return ` <div class="cards image">
         <h2>${pokemon.id}. ${pokemon.name}</h2>
+        <div class="pokemon">
         <img src=${pokemon.image} alt="${pokemon.name}"/>
-        <p class="icons" >
-          <img class="icons" src="icons/${type[0]}.png" />
-          <img class="icons"  src="icons/${type[1]}.png" />
-        </p>
+        </div>
+        <div class="icons" >
+          <img  src="icons/${type[0]}.png" />
+          <img  src="icons/${type[1]}.png" />
+        </div>
         </div>`;
 
       }}).join('');
@@ -133,7 +137,9 @@ pokemonSearch.addEventListener('keyup', () => {
     if (kind.length < 2 && poke.name.includes(value)) {
       return ` <div class="cards">
       <h2>${poke.id}. ${poke.name}</h2>
+      <div class="pokemon">
       <img src=${poke.image} alt="${poke.name}"/>
+      <div/>
       <div class="icons" >
       <img  src="icons/${kind[0]}.png" />
       </div>
@@ -141,11 +147,13 @@ pokemonSearch.addEventListener('keyup', () => {
     } else if (kind.length > 1 && poke.name.includes(value)) {
       return ` <div class="cards image">
       <h2>${poke.id}. ${poke.name}</h2>
+      <div class="pokemon">
       <img src=${poke.image} alt="${poke.name}"/>
-      <p class="icons" >
-        <img class="icons" src="icons/${kind[0]}.png" />
-        <img class="icons"  src="icons/${kind[1]}.png" />
-      </p>
+      <div/>
+      <div class="icons" >
+        <img src="icons/${kind[0]}.png" />
+        <img src="icons/${kind[1]}.png" />
+      </div>
       </div>`;
         }
   }).join('');

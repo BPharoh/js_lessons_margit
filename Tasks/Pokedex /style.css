@@ -5,11 +5,11 @@
 }
 
 body {
-  background-color: rgb(0, 132, 255);
   margin: 0;
   font-family: Roboto, sans-serif;
   color: white;
   text-align: center;
+  background-image: url("icons/neon-fanart.jpeg");
 }
 
 h1 {
@@ -17,12 +17,14 @@ h1 {
 }
 
 h2 {
-  background-color: aqua;
-  font-size: 12px;
+  background-color: rgb(155, 14, 14);
+  font-size: 0.8rem;
+  border-radius: 10px;
+  min-height: 1rem;
 }
 
 p {
-  margin: 10px 10px;
+  margin: 10px;
 }
 
 /*  Game container */
@@ -33,28 +35,64 @@ p {
   justify-content: center;
   gap:2rem;
   grid-template-columns: repeat(6, 1fr);
-
 }
 
 .cards {
   max-height: 300px;
   width: 170px;
-  border: 1px solid green;
-  background-color: blueviolet;
+  background-color: green;
+  border-radius: 10px;
+  transition: 3s;
+  animation-name: card-transition;
+  animation-duration: 10s;
 }
 
-.cards img {
+.cards:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem #ffee10);
+}
+ 
+.pokemon img {
   height: 160px;
   width: 100%;
   object-fit: cover;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem #ffee10);
 }
 
-.cards .icons img {
+.icons img {
   height: 2rem;
   width: 2rem;
 }
 
+/* Pokemon Animation */
 
+@keyframes card-transition {
+  from {background-color: green;}
+  to {background-color: red;}
+}
+
+.pokemon img:hover {
+  animation: vibration 0.4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes vibration {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Button section */
 button {
   margin: 5px 5px;
   padding: 5px;
